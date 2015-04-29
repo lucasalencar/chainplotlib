@@ -21,8 +21,8 @@ class Plot(object):
       self.options[key] = opts
     return self
 
-  def add(self, x, y):
-    self.plots.append({'x': x, 'y': y})
+  def add(self, x, y, title = ''):
+    self.plots.append(dict(x = x, y = y, title = title))
     return self
 
   def plot(self, rows = 1, cols = 1, **kwargs):
@@ -40,6 +40,8 @@ class Plot(object):
     self.plot_options(ax, x, y, i)
 
   def plot_options(self, ax, x, y, i):
+    if bool(self.plots[i]['title']):
+      ax.set_title(self.plots[i]['title'])
     if 'axis_zero' in self.options:
       self.options['axis_zero'].plot(ax, x, y)
     if 'marks' in self.options:
