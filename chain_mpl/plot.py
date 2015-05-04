@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 
 from axis import Axis
 from marks import Marks
+from along_axis import AlongAxis
 
 class Plot(object):
 
@@ -50,6 +51,8 @@ class Plot(object):
       self.options['marks_%s' % i].plot(ax, x, y)
     if 'axis' in self.options:
       self.options['axis'].plot(ax, x, y)
+    if 'along_axis' in self.options:
+      self.options['along_axis'].plot(ax, x, y)
 
   def ax_labels(self, xlabel = '', ylabel = '', **kwargs):
     """Sets the axis X and Y labels"""
@@ -93,3 +96,6 @@ class Plot(object):
     self.add_opts('axis', Axis().ticks(inc = inc, size = size))
     return self
 
+  def along_x(self, xcoords, y = -0.1, label = '', fontsize = 12, **kwargs):
+    self.add_opts('along_axis', AlongAxis().along_x(xcoords, y, label, fontsize, **kwargs))
+    return self
