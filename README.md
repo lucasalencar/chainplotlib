@@ -36,15 +36,17 @@ Any configuration must be called before the plot() method:
 
 The object Plot supports the following configs:
 
-* ax_labels(xlabel = '', ylabel = '', **args): The X and Y axis labels
-* limits(xmin = None, xmax = None, ymin = None, ymax = None): Sets up the limits that the plot is showed
-* fill(**args): Fill between the lines
-* axis_zero(**args): Adds a line in the Y = 0 position
-* mark_x(x, i = 0, **args): Marks a value with a line from the X axis
-* mark_y(y, i = 0, **args): Marks a value with a line from the Y axis
-* xticks(inc = None, size = None): Defines the increment and font size of the ticks in the X axis
-* yticks(inc = None, size = None): Defines the increment and font size of the ticks in the Y axis
-* ticks(inc = None, size = None): Defines the increment and font size of the ticks in both axis
-* along_x(xcoords, y = -0.1, label = '', fontsize = 12, **args): Adds intervals along the X axis
+```python
+ax_labels(xlabel = '', ylabel = '', **args) # The X and Y axis labels
+limits(xmin = None, xmax = None, ymin = None, ymax = None) # Sets up the limits that the plot is showed
+fill(**args) # Fill between the lines
+axis_zero(**args) # Adds a line in the Y = 0 position
+mark_x(x, i = 0, **args) # Marks a value with a line from the X axis
+mark_y(y, i = 0, **args) # Marks a value with a line from the Y axis
+xticks(inc = None, size = None) # Defines the increment and font size of the ticks in the X axis
+yticks(inc = None, size = None) # Defines the increment and font size of the ticks in the Y axis
+ticks(inc = None, size = None) # Defines the increment and font size of the ticks in both axis
+along_x(xcoords, y = -0.1, label = '', fontsize = 12, **args) # Adds intervals along the X axis
+```
 
 Lucas André de Alencar (c)
