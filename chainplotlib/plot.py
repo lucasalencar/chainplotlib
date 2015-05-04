@@ -99,3 +99,11 @@ class Plot(object):
   def along_x(self, xcoords, y = -0.1, label = '', fontsize = 12, **kwargs):
     self.add_opts('along_axis', AlongAxis().along_x(xcoords, y, label, fontsize, **kwargs))
     return self
+
+  def mark_line_y(self, y, **kwargs):
+    self.add_opts('marks', Marks().hline(y, **kwargs))
+    return self
+
+  def mark_line_x(self, x, **kwargs):
+    self.add_opts('marks', Marks().vline(x, **kwargs))
+    return self
