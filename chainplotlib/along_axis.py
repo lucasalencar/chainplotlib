@@ -26,7 +26,6 @@ class AlongAxis(Opts):
   def plot(self, ax, x, y, **kwargs):
     if 'along_x' in self.opts:
       for an in self.opts['along_x']:
-        print an
         ax.annotate("",
           xy = (an['xcoords'][0], an['y']),
           xytext = (an['xcoords'][1], an['y']),
