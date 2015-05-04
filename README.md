@@ -47,8 +47,8 @@ xticks(inc = None, size = None) # Defines the increment and font size of the tic
 yticks(inc = None, size = None) # Defines the increment and font size of the ticks in the Y axis
 ticks(inc = None, size = None) # Defines the increment and font size of the ticks in both axis
 along_x(xcoords, y = -0.1, label = '', fontsize = 12, **args) # Adds intervals along the X axis
-mark_line_y(y, **kwargs): Adds a line in the Y position specified
-mark_line_x(x, **kwargs): Adds a line in the X position specified
+mark_line_y(y, **kwargs) # Adds a line in the Y position specified
+mark_line_x(x, **kwargs) # Adds a line in the X position specified
 ```
 
 Lucas André de Alencar (c)

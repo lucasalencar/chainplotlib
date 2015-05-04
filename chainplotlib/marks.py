@@ -52,7 +52,6 @@ class Marks(Opts):
     if 'fill_under' in self.opts:
       ax.fill_between(x, y, **self.opts['fill_under'])
     if 'hline' in self.opts:
-      print self.opts['hline']
       for v in self.opts['hline']['y']:
         ax.axhline(v, **self.opts['hline']['args'])
     if 'vline' in self.opts:
