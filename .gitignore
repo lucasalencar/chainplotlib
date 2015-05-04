@@ -1,2 +1,5 @@
 **/*.pyc
 main.py
+build/
+chainplotlib.egg-info/
+dist/
